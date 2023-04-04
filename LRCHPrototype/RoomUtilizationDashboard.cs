@@ -65,31 +65,6 @@ namespace LRCHPrototype
         }
 
         /**
-         * Displays the information of the Room Utilization Table
-         * 
-         * <param name="connection"></param>
-         */
-        private void ShowRoomUtilizationTable(SqlConnection connection)
-        {
-            string storedProcedureName = "dbo.spGetRoomUtilization";
-
-            using (SqlCommand command = new SqlCommand(storedProcedureName, connection))
-            {
-                command.CommandType = CommandType.StoredProcedure;
-
-                connection.Open();
-
-                // Set the value of the room utilization data grid
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                DataTable table = new DataTable("Room Utilization");
-                adapter.Fill(table);
-                dgvRoomUtil.DataSource = table.DefaultView;
-
-                connection.Close();
-            }
-        }
-
-        /**
          * Displays the information about the total number of beds for the specified room type
          * 
          * <param name="connection"></param>
@@ -97,7 +72,7 @@ namespace LRCHPrototype
          */
         private void ShowTotalBedsPerRoomType(SqlConnection connection, string roomType)
         {
-            string storedProcedureName = "dbo.spCountTotalBedsPerRoomType";
+            string storedProcedureName = "dbo.sp_Count_Total_Beds_Per_Room_Type";
 
             using (SqlCommand command = new SqlCommand(storedProcedureName, connection))
             {
@@ -144,7 +119,7 @@ namespace LRCHPrototype
          */
         private void ShowTotalEmptyBedsPerRoomType(SqlConnection connection, string roomType)
         {
-            string storedProcedureName = "dbo.spCountEmptyBedsPerRoomType";
+            string storedProcedureName = "dbo.sp_Count_Empty_Beds_Per_Room_Type";
 
             using (SqlCommand command = new SqlCommand(storedProcedureName, connection))
             {
