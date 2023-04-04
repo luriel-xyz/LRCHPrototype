@@ -40,9 +40,6 @@ namespace LRCHPrototype
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    // Show Room Utilization Table
-                    ShowRoomUtilizationTable(connection);
-
                     // Show total beds per room type
                     ShowTotalBedsPerRoomType(connection, PRIVATE);
                     ShowTotalBedsPerRoomType(connection, SEMI_PRIVATE);
