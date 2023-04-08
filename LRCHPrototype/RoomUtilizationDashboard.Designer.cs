@@ -28,329 +28,449 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grpBxRoom = new System.Windows.Forms.GroupBox();
-            this.lblW4TotalEmptyBeds = new System.Windows.Forms.Label();
-            this.lblW3TotalEmptyBeds = new System.Windows.Forms.Label();
-            this.lblICTotalEmptyBeds = new System.Windows.Forms.Label();
-            this.lblSPTotalEmptyBeds = new System.Windows.Forms.Label();
-            this.lblPRTotalEmptyBeds = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.lblW4TotalBeds = new System.Windows.Forms.Label();
-            this.lblW3TotalBeds = new System.Windows.Forms.Label();
-            this.lblICTotalBeds = new System.Windows.Forms.Label();
-            this.lblSPTotalBeds = new System.Windows.Forms.Label();
-            this.lblPRTotalBeds = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.txtOverallOccupancyByRooms = new System.Windows.Forms.TextBox();
+            this.txtOverallOccupancyByBeds = new System.Windows.Forms.TextBox();
+            this.txtNumOfBedsDischarging = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtOccupiedPR = new System.Windows.Forms.TextBox();
+            this.txtOccupiedSP = new System.Windows.Forms.TextBox();
+            this.txtOccupiedIC = new System.Windows.Forms.TextBox();
+            this.txtOccupiedW3 = new System.Windows.Forms.TextBox();
+            this.txtOccupiedW4 = new System.Windows.Forms.TextBox();
+            this.lblOverallOccupancyByRooms = new System.Windows.Forms.Label();
+            this.lblOverallOccupancyByBeds = new System.Windows.Forms.Label();
+            this.lblNumOfBedsDischargingPatientsToday = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtEmptyW4 = new System.Windows.Forms.TextBox();
+            this.txtEmptyW3 = new System.Windows.Forms.TextBox();
+            this.txtEmptyIC = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtEmptySP = new System.Windows.Forms.TextBox();
+            this.txtEmptyPR = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dgvRoomUtil = new System.Windows.Forms.DataGridView();
-            this.lblRmUtilToday = new System.Windows.Forms.Label();
-            this.grpBxRoom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRoomUtil)).BeginInit();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtStayId = new System.Windows.Forms.TextBox();
+            this.btnUnassignBed = new System.Windows.Forms.Button();
+            this.btnMenu = new System.Windows.Forms.Button();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // grpBxRoom
+            // txtOverallOccupancyByRooms
             // 
-            this.grpBxRoom.Controls.Add(this.lblW4TotalEmptyBeds);
-            this.grpBxRoom.Controls.Add(this.lblW3TotalEmptyBeds);
-            this.grpBxRoom.Controls.Add(this.lblICTotalEmptyBeds);
-            this.grpBxRoom.Controls.Add(this.lblSPTotalEmptyBeds);
-            this.grpBxRoom.Controls.Add(this.lblPRTotalEmptyBeds);
-            this.grpBxRoom.Controls.Add(this.label16);
-            this.grpBxRoom.Controls.Add(this.label17);
-            this.grpBxRoom.Controls.Add(this.label18);
-            this.grpBxRoom.Controls.Add(this.label19);
-            this.grpBxRoom.Controls.Add(this.label20);
-            this.grpBxRoom.Controls.Add(this.label21);
-            this.grpBxRoom.Controls.Add(this.lblW4TotalBeds);
-            this.grpBxRoom.Controls.Add(this.lblW3TotalBeds);
-            this.grpBxRoom.Controls.Add(this.lblICTotalBeds);
-            this.grpBxRoom.Controls.Add(this.lblSPTotalBeds);
-            this.grpBxRoom.Controls.Add(this.lblPRTotalBeds);
-            this.grpBxRoom.Controls.Add(this.label10);
-            this.grpBxRoom.Controls.Add(this.label9);
-            this.grpBxRoom.Controls.Add(this.label8);
-            this.grpBxRoom.Controls.Add(this.label7);
-            this.grpBxRoom.Controls.Add(this.label3);
-            this.grpBxRoom.Controls.Add(this.label5);
-            this.grpBxRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.grpBxRoom.Location = new System.Drawing.Point(864, 12);
-            this.grpBxRoom.Name = "grpBxRoom";
-            this.grpBxRoom.Size = new System.Drawing.Size(296, 492);
-            this.grpBxRoom.TabIndex = 1;
-            this.grpBxRoom.TabStop = false;
-            this.grpBxRoom.Text = "Room Statistics";
+            this.txtOverallOccupancyByRooms.Location = new System.Drawing.Point(289, 33);
+            this.txtOverallOccupancyByRooms.Name = "txtOverallOccupancyByRooms";
+            this.txtOverallOccupancyByRooms.ReadOnly = true;
+            this.txtOverallOccupancyByRooms.Size = new System.Drawing.Size(113, 22);
+            this.txtOverallOccupancyByRooms.TabIndex = 3;
             // 
-            // lblW4TotalEmptyBeds
+            // txtOverallOccupancyByBeds
             // 
-            this.lblW4TotalEmptyBeds.AutoSize = true;
-            this.lblW4TotalEmptyBeds.Location = new System.Drawing.Point(230, 420);
-            this.lblW4TotalEmptyBeds.Name = "lblW4TotalEmptyBeds";
-            this.lblW4TotalEmptyBeds.Size = new System.Drawing.Size(20, 24);
-            this.lblW4TotalEmptyBeds.TabIndex = 31;
-            this.lblW4TotalEmptyBeds.Text = "0";
+            this.txtOverallOccupancyByBeds.Location = new System.Drawing.Point(289, 76);
+            this.txtOverallOccupancyByBeds.Name = "txtOverallOccupancyByBeds";
+            this.txtOverallOccupancyByBeds.ReadOnly = true;
+            this.txtOverallOccupancyByBeds.Size = new System.Drawing.Size(113, 22);
+            this.txtOverallOccupancyByBeds.TabIndex = 7;
             // 
-            // lblW3TotalEmptyBeds
+            // txtNumOfBedsDischarging
             // 
-            this.lblW3TotalEmptyBeds.AutoSize = true;
-            this.lblW3TotalEmptyBeds.Location = new System.Drawing.Point(230, 386);
-            this.lblW3TotalEmptyBeds.Name = "lblW3TotalEmptyBeds";
-            this.lblW3TotalEmptyBeds.Size = new System.Drawing.Size(20, 24);
-            this.lblW3TotalEmptyBeds.TabIndex = 30;
-            this.lblW3TotalEmptyBeds.Text = "0";
+            this.txtNumOfBedsDischarging.Location = new System.Drawing.Point(289, 117);
+            this.txtNumOfBedsDischarging.Name = "txtNumOfBedsDischarging";
+            this.txtNumOfBedsDischarging.ReadOnly = true;
+            this.txtNumOfBedsDischarging.Size = new System.Drawing.Size(113, 22);
+            this.txtNumOfBedsDischarging.TabIndex = 8;
             // 
-            // lblICTotalEmptyBeds
+            // label1
             // 
-            this.lblICTotalEmptyBeds.AutoSize = true;
-            this.lblICTotalEmptyBeds.Location = new System.Drawing.Point(230, 352);
-            this.lblICTotalEmptyBeds.Name = "lblICTotalEmptyBeds";
-            this.lblICTotalEmptyBeds.Size = new System.Drawing.Size(20, 24);
-            this.lblICTotalEmptyBeds.TabIndex = 29;
-            this.lblICTotalEmptyBeds.Text = "0";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(136, 222);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 16);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Private Room (PR):";
             // 
-            // lblSPTotalEmptyBeds
+            // label4
             // 
-            this.lblSPTotalEmptyBeds.AutoSize = true;
-            this.lblSPTotalEmptyBeds.Location = new System.Drawing.Point(230, 318);
-            this.lblSPTotalEmptyBeds.Name = "lblSPTotalEmptyBeds";
-            this.lblSPTotalEmptyBeds.Size = new System.Drawing.Size(20, 24);
-            this.lblSPTotalEmptyBeds.TabIndex = 28;
-            this.lblSPTotalEmptyBeds.Text = "0";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(136, 267);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(120, 16);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Semi Provate (SP):";
             // 
-            // lblPRTotalEmptyBeds
+            // label6
             // 
-            this.lblPRTotalEmptyBeds.AutoSize = true;
-            this.lblPRTotalEmptyBeds.Location = new System.Drawing.Point(230, 284);
-            this.lblPRTotalEmptyBeds.Name = "lblPRTotalEmptyBeds";
-            this.lblPRTotalEmptyBeds.Size = new System.Drawing.Size(20, 24);
-            this.lblPRTotalEmptyBeds.TabIndex = 27;
-            this.lblPRTotalEmptyBeds.Text = "0";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(136, 311);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 16);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Intensive Care (IC):";
             // 
-            // label16
+            // label11
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(36, 420);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(172, 24);
-            this.label16.TabIndex = 26;
-            this.label16.Text = "Ward, 4 beds (W4):";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(136, 351);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(122, 16);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Ward, 3 Beds (W3):";
             // 
-            // label17
+            // label12
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(36, 386);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(172, 24);
-            this.label17.TabIndex = 25;
-            this.label17.Text = "Ward, 3 beds (W3):";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(136, 388);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(122, 16);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Ward, 4 Beds (W4):";
             // 
-            // label18
+            // txtOccupiedPR
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(36, 352);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(168, 24);
-            this.label18.TabIndex = 24;
-            this.label18.Text = "Intensive Care (IC):";
+            this.txtOccupiedPR.Location = new System.Drawing.Point(289, 219);
+            this.txtOccupiedPR.Name = "txtOccupiedPR";
+            this.txtOccupiedPR.ReadOnly = true;
+            this.txtOccupiedPR.Size = new System.Drawing.Size(113, 22);
+            this.txtOccupiedPR.TabIndex = 14;
             // 
-            // label19
+            // txtOccupiedSP
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(36, 318);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(160, 24);
-            this.label19.TabIndex = 23;
-            this.label19.Text = "Semi Private (SP):";
+            this.txtOccupiedSP.Location = new System.Drawing.Point(289, 261);
+            this.txtOccupiedSP.Name = "txtOccupiedSP";
+            this.txtOccupiedSP.ReadOnly = true;
+            this.txtOccupiedSP.Size = new System.Drawing.Size(113, 22);
+            this.txtOccupiedSP.TabIndex = 15;
             // 
-            // label20
+            // txtOccupiedIC
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(36, 284);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(113, 24);
-            this.label20.TabIndex = 22;
-            this.label20.Text = "Private (PR):";
+            this.txtOccupiedIC.Location = new System.Drawing.Point(289, 305);
+            this.txtOccupiedIC.Name = "txtOccupiedIC";
+            this.txtOccupiedIC.ReadOnly = true;
+            this.txtOccupiedIC.Size = new System.Drawing.Size(113, 22);
+            this.txtOccupiedIC.TabIndex = 16;
             // 
-            // label21
+            // txtOccupiedW3
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(8, 248);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(232, 24);
-            this.label21.TabIndex = 21;
-            this.label21.Text = "Empty beds per room type";
+            this.txtOccupiedW3.Location = new System.Drawing.Point(289, 346);
+            this.txtOccupiedW3.Name = "txtOccupiedW3";
+            this.txtOccupiedW3.ReadOnly = true;
+            this.txtOccupiedW3.Size = new System.Drawing.Size(113, 22);
+            this.txtOccupiedW3.TabIndex = 17;
             // 
-            // lblW4TotalBeds
+            // txtOccupiedW4
             // 
-            this.lblW4TotalBeds.AutoSize = true;
-            this.lblW4TotalBeds.Location = new System.Drawing.Point(230, 208);
-            this.lblW4TotalBeds.Name = "lblW4TotalBeds";
-            this.lblW4TotalBeds.Size = new System.Drawing.Size(20, 24);
-            this.lblW4TotalBeds.TabIndex = 20;
-            this.lblW4TotalBeds.Text = "0";
+            this.txtOccupiedW4.Location = new System.Drawing.Point(289, 388);
+            this.txtOccupiedW4.Name = "txtOccupiedW4";
+            this.txtOccupiedW4.ReadOnly = true;
+            this.txtOccupiedW4.Size = new System.Drawing.Size(113, 22);
+            this.txtOccupiedW4.TabIndex = 18;
             // 
-            // lblW3TotalBeds
+            // lblOverallOccupancyByRooms
             // 
-            this.lblW3TotalBeds.AutoSize = true;
-            this.lblW3TotalBeds.Location = new System.Drawing.Point(230, 174);
-            this.lblW3TotalBeds.Name = "lblW3TotalBeds";
-            this.lblW3TotalBeds.Size = new System.Drawing.Size(20, 24);
-            this.lblW3TotalBeds.TabIndex = 19;
-            this.lblW3TotalBeds.Text = "0";
+            this.lblOverallOccupancyByRooms.AutoSize = true;
+            this.lblOverallOccupancyByRooms.Location = new System.Drawing.Point(23, 39);
+            this.lblOverallOccupancyByRooms.Name = "lblOverallOccupancyByRooms";
+            this.lblOverallOccupancyByRooms.Size = new System.Drawing.Size(186, 16);
+            this.lblOverallOccupancyByRooms.TabIndex = 2;
+            this.lblOverallOccupancyByRooms.Text = "Overall Occupancy by Rooms";
             // 
-            // lblICTotalBeds
+            // lblOverallOccupancyByBeds
             // 
-            this.lblICTotalBeds.AutoSize = true;
-            this.lblICTotalBeds.Location = new System.Drawing.Point(230, 140);
-            this.lblICTotalBeds.Name = "lblICTotalBeds";
-            this.lblICTotalBeds.Size = new System.Drawing.Size(20, 24);
-            this.lblICTotalBeds.TabIndex = 18;
-            this.lblICTotalBeds.Text = "0";
+            this.lblOverallOccupancyByBeds.AutoSize = true;
+            this.lblOverallOccupancyByBeds.Location = new System.Drawing.Point(23, 82);
+            this.lblOverallOccupancyByBeds.Name = "lblOverallOccupancyByBeds";
+            this.lblOverallOccupancyByBeds.Size = new System.Drawing.Size(174, 16);
+            this.lblOverallOccupancyByBeds.TabIndex = 4;
+            this.lblOverallOccupancyByBeds.Text = "Overall Occupancy by Beds";
             // 
-            // lblSPTotalBeds
+            // lblNumOfBedsDischargingPatientsToday
             // 
-            this.lblSPTotalBeds.AutoSize = true;
-            this.lblSPTotalBeds.Location = new System.Drawing.Point(230, 106);
-            this.lblSPTotalBeds.Name = "lblSPTotalBeds";
-            this.lblSPTotalBeds.Size = new System.Drawing.Size(20, 24);
-            this.lblSPTotalBeds.TabIndex = 17;
-            this.lblSPTotalBeds.Text = "0";
+            this.lblNumOfBedsDischargingPatientsToday.AutoSize = true;
+            this.lblNumOfBedsDischargingPatientsToday.Location = new System.Drawing.Point(26, 124);
+            this.lblNumOfBedsDischargingPatientsToday.Name = "lblNumOfBedsDischargingPatientsToday";
+            this.lblNumOfBedsDischargingPatientsToday.Size = new System.Drawing.Size(232, 16);
+            this.lblNumOfBedsDischargingPatientsToday.TabIndex = 5;
+            this.lblNumOfBedsDischargingPatientsToday.Text = "# of Beds Discharging Patients Today";
             // 
-            // lblPRTotalBeds
+            // label2
             // 
-            this.lblPRTotalBeds.AutoSize = true;
-            this.lblPRTotalBeds.Location = new System.Drawing.Point(230, 72);
-            this.lblPRTotalBeds.Name = "lblPRTotalBeds";
-            this.lblPRTotalBeds.Size = new System.Drawing.Size(20, 24);
-            this.lblPRTotalBeds.TabIndex = 16;
-            this.lblPRTotalBeds.Text = "0";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 187);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(168, 16);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Occupancy by Room Type";
             // 
-            // label10
+            // tabControl1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(36, 208);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(172, 24);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Ward, 4 beds (W4):";
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(28, 25);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(440, 758);
+            this.tabControl1.TabIndex = 20;
             // 
-            // label9
+            // tabPage1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(36, 174);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(172, 24);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Ward, 3 beds (W3):";
+            this.tabPage1.Controls.Add(this.txtEmptyW4);
+            this.tabPage1.Controls.Add(this.txtEmptyW3);
+            this.tabPage1.Controls.Add(this.txtEmptyIC);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.txtEmptySP);
+            this.tabPage1.Controls.Add(this.txtEmptyPR);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.txtOverallOccupancyByRooms);
+            this.tabPage1.Controls.Add(this.lblOverallOccupancyByRooms);
+            this.tabPage1.Controls.Add(this.txtOccupiedW4);
+            this.tabPage1.Controls.Add(this.lblOverallOccupancyByBeds);
+            this.tabPage1.Controls.Add(this.txtOccupiedW3);
+            this.tabPage1.Controls.Add(this.lblNumOfBedsDischargingPatientsToday);
+            this.tabPage1.Controls.Add(this.txtOccupiedIC);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.txtOccupiedSP);
+            this.tabPage1.Controls.Add(this.txtOverallOccupancyByBeds);
+            this.tabPage1.Controls.Add(this.txtOccupiedPR);
+            this.tabPage1.Controls.Add(this.txtNumOfBedsDischarging);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(432, 729);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "View Room & Bed ";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // tabPage2
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(36, 140);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(168, 24);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Intensive Care (IC):";
+            this.tabPage2.Controls.Add(this.btnUnassignBed);
+            this.tabPage2.Controls.Add(this.txtStayId);
+            this.tabPage2.Controls.Add(this.label14);
+            this.tabPage2.Controls.Add(this.label13);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(432, 729);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Update";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // txtEmptyW4
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(36, 106);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(160, 24);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Semi Private (SP):";
+            this.txtEmptyW4.Location = new System.Drawing.Point(289, 664);
+            this.txtEmptyW4.Name = "txtEmptyW4";
+            this.txtEmptyW4.ReadOnly = true;
+            this.txtEmptyW4.Size = new System.Drawing.Size(113, 22);
+            this.txtEmptyW4.TabIndex = 29;
+            // 
+            // txtEmptyW3
+            // 
+            this.txtEmptyW3.Location = new System.Drawing.Point(289, 622);
+            this.txtEmptyW3.Name = "txtEmptyW3";
+            this.txtEmptyW3.ReadOnly = true;
+            this.txtEmptyW3.Size = new System.Drawing.Size(113, 22);
+            this.txtEmptyW3.TabIndex = 28;
+            // 
+            // txtEmptyIC
+            // 
+            this.txtEmptyIC.Location = new System.Drawing.Point(289, 581);
+            this.txtEmptyIC.Name = "txtEmptyIC";
+            this.txtEmptyIC.ReadOnly = true;
+            this.txtEmptyIC.Size = new System.Drawing.Size(113, 22);
+            this.txtEmptyIC.TabIndex = 27;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 72);
+            this.label3.Location = new System.Drawing.Point(29, 463);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 24);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Private (PR):";
+            this.label3.Size = new System.Drawing.Size(209, 16);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "# of Empty Rooms by Room Type";
+            // 
+            // txtEmptySP
+            // 
+            this.txtEmptySP.Location = new System.Drawing.Point(289, 537);
+            this.txtEmptySP.Name = "txtEmptySP";
+            this.txtEmptySP.ReadOnly = true;
+            this.txtEmptySP.Size = new System.Drawing.Size(113, 22);
+            this.txtEmptySP.TabIndex = 26;
+            // 
+            // txtEmptyPR
+            // 
+            this.txtEmptyPR.Location = new System.Drawing.Point(289, 495);
+            this.txtEmptyPR.Name = "txtEmptyPR";
+            this.txtEmptyPR.ReadOnly = true;
+            this.txtEmptyPR.Size = new System.Drawing.Size(113, 22);
+            this.txtEmptyPR.TabIndex = 25;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 36);
+            this.label5.Location = new System.Drawing.Point(136, 664);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(213, 24);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Beds total per room type";
+            this.label5.Size = new System.Drawing.Size(122, 16);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Ward, 4 Beds (W4):";
             // 
-            // dgvRoomUtil
+            // label7
             // 
-            this.dgvRoomUtil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRoomUtil.Location = new System.Drawing.Point(12, 42);
-            this.dgvRoomUtil.Name = "dgvRoomUtil";
-            this.dgvRoomUtil.RowHeadersWidth = 51;
-            this.dgvRoomUtil.RowTemplate.Height = 24;
-            this.dgvRoomUtil.Size = new System.Drawing.Size(831, 462);
-            this.dgvRoomUtil.TabIndex = 2;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(136, 498);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(122, 16);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Private Room (PR):";
             // 
-            // lblRmUtilToday
+            // label8
             // 
-            this.lblRmUtilToday.AutoSize = true;
-            this.lblRmUtilToday.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblRmUtilToday.Location = new System.Drawing.Point(332, 12);
-            this.lblRmUtilToday.Name = "lblRmUtilToday";
-            this.lblRmUtilToday.Size = new System.Drawing.Size(219, 20);
-            this.lblRmUtilToday.TabIndex = 3;
-            this.lblRmUtilToday.Text = "Room Utilization 04/03/2023";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(136, 627);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(122, 16);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Ward, 3 Beds (W3):";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(136, 543);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(120, 16);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Semi Provate (SP):";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(136, 587);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(118, 16);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "Intensive Care (IC):";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(27, 34);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(91, 16);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Unassign bed";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(75, 63);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(158, 16);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Enter Stay ID to unassign:";
+            // 
+            // txtStayId
+            // 
+            this.txtStayId.Location = new System.Drawing.Point(255, 57);
+            this.txtStayId.Name = "txtStayId";
+            this.txtStayId.Size = new System.Drawing.Size(100, 22);
+            this.txtStayId.TabIndex = 2;
+            // 
+            // btnUnassignBed
+            // 
+            this.btnUnassignBed.Location = new System.Drawing.Point(255, 112);
+            this.btnUnassignBed.Name = "btnUnassignBed";
+            this.btnUnassignBed.Size = new System.Drawing.Size(116, 23);
+            this.btnUnassignBed.TabIndex = 3;
+            this.btnUnassignBed.Text = "Unassign Bed";
+            this.btnUnassignBed.UseVisualStyleBackColor = true;
+            this.btnUnassignBed.Click += new System.EventHandler(this.btnUnassignBed_Click);
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.Location = new System.Drawing.Point(28, 798);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(103, 23);
+            this.btnMenu.TabIndex = 21;
+            this.btnMenu.Text = "MENU";
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // RoomUtilizationDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1179, 531);
-            this.Controls.Add(this.lblRmUtilToday);
-            this.Controls.Add(this.dgvRoomUtil);
-            this.Controls.Add(this.grpBxRoom);
+            this.ClientSize = new System.Drawing.Size(502, 833);
+            this.Controls.Add(this.btnMenu);
+            this.Controls.Add(this.tabControl1);
             this.Name = "RoomUtilizationDashboard";
             this.Text = "Room Utilization Dashboard";
             this.Load += new System.EventHandler(this.RoomUtilizationDashboard_Load);
-            this.grpBxRoom.ResumeLayout(false);
-            this.grpBxRoom.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRoomUtil)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox grpBxRoom;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+
+        private System.Windows.Forms.TextBox txtOverallOccupancyByRooms;
+        private System.Windows.Forms.TextBox txtOverallOccupancyByBeds;
+        private System.Windows.Forms.TextBox txtNumOfBedsDischarging;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtOccupiedPR;
+        private System.Windows.Forms.TextBox txtOccupiedSP;
+        private System.Windows.Forms.TextBox txtOccupiedIC;
+        private System.Windows.Forms.TextBox txtOccupiedW3;
+        private System.Windows.Forms.TextBox txtOccupiedW4;
+        private System.Windows.Forms.Label lblOverallOccupancyByRooms;
+        private System.Windows.Forms.Label lblOverallOccupancyByBeds;
+        private System.Windows.Forms.Label lblNumOfBedsDischargingPatientsToday;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TextBox txtEmptyW4;
+        private System.Windows.Forms.TextBox txtEmptyW3;
+        private System.Windows.Forms.TextBox txtEmptyIC;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtEmptySP;
+        private System.Windows.Forms.TextBox txtEmptyPR;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblW4TotalBeds;
-        private System.Windows.Forms.Label lblW3TotalBeds;
-        private System.Windows.Forms.Label lblICTotalBeds;
-        private System.Windows.Forms.Label lblSPTotalBeds;
-        private System.Windows.Forms.Label lblPRTotalBeds;
-        private System.Windows.Forms.Label lblW4TotalEmptyBeds;
-        private System.Windows.Forms.Label lblW3TotalEmptyBeds;
-        private System.Windows.Forms.Label lblICTotalEmptyBeds;
-        private System.Windows.Forms.Label lblSPTotalEmptyBeds;
-        private System.Windows.Forms.Label lblPRTotalEmptyBeds;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.DataGridView dgvRoomUtil;
-        private System.Windows.Forms.Label lblRmUtilToday;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TextBox txtStayId;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnUnassignBed;
+        private System.Windows.Forms.Button btnMenu;
     }
 }
