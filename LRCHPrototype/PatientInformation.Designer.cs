@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtBoxNote = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lblDateDischarged = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.dgvTreatments = new System.Windows.Forms.DataGridView();
             this.lblTotalAppointments = new System.Windows.Forms.Label();
@@ -59,22 +62,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnGoBack = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAddNote = new System.Windows.Forms.Button();
+            this.btnAddTreatment = new System.Windows.Forms.Button();
             this.txtBxNote = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtBxTreatment = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.btnAddTreatment = new System.Windows.Forms.Button();
-            this.btnAddNote = new System.Windows.Forms.Button();
-            this.lblDateDischarged = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtBoxNote = new System.Windows.Forms.TextBox();
+            this.btnAddLaboratory = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.dgvLaboratory = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTreatments)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLaboratory)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label18);
+            this.groupBox1.Controls.Add(this.dgvLaboratory);
             this.groupBox1.Controls.Add(this.txtBoxNote);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.lblDateDischarged);
@@ -108,15 +114,44 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 52);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(835, 270);
+            this.groupBox1.Size = new System.Drawing.Size(1055, 270);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // txtBoxNote
+            // 
+            this.txtBoxNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtBoxNote.Location = new System.Drawing.Point(601, 52);
+            this.txtBoxNote.Multiline = true;
+            this.txtBoxNote.Name = "txtBoxNote";
+            this.txtBoxNote.ReadOnly = true;
+            this.txtBoxNote.Size = new System.Drawing.Size(222, 162);
+            this.txtBoxNote.TabIndex = 37;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label13.Location = new System.Drawing.Point(597, 18);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(44, 20);
+            this.label13.TabIndex = 36;
+            this.label13.Text = "Note";
+            // 
+            // lblDateDischarged
+            // 
+            this.lblDateDischarged.AutoSize = true;
+            this.lblDateDischarged.Location = new System.Drawing.Point(155, 230);
+            this.lblDateDischarged.Name = "lblDateDischarged";
+            this.lblDateDischarged.Size = new System.Drawing.Size(71, 16);
+            this.lblDateDischarged.TabIndex = 34;
+            this.lblDateDischarged.Text = "10/02/2021";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label15.Location = new System.Drawing.Point(372, 18);
+            this.label15.Location = new System.Drawing.Point(311, 18);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(94, 20);
             this.label15.TabIndex = 33;
@@ -379,6 +414,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnAddLaboratory);
             this.groupBox2.Controls.Add(this.btnAddNote);
             this.groupBox2.Controls.Add(this.btnAddTreatment);
             this.groupBox2.Controls.Add(this.txtBxNote);
@@ -387,13 +423,33 @@
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Location = new System.Drawing.Point(12, 328);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(835, 224);
+            this.groupBox2.Size = new System.Drawing.Size(1055, 224);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             // 
+            // btnAddNote
+            // 
+            this.btnAddNote.Location = new System.Drawing.Point(532, 186);
+            this.btnAddNote.Name = "btnAddNote";
+            this.btnAddNote.Size = new System.Drawing.Size(75, 23);
+            this.btnAddNote.TabIndex = 39;
+            this.btnAddNote.Text = "Add";
+            this.btnAddNote.UseVisualStyleBackColor = true;
+            this.btnAddNote.Click += new System.EventHandler(this.AddNote);
+            // 
+            // btnAddTreatment
+            // 
+            this.btnAddTreatment.Location = new System.Drawing.Point(173, 186);
+            this.btnAddTreatment.Name = "btnAddTreatment";
+            this.btnAddTreatment.Size = new System.Drawing.Size(75, 23);
+            this.btnAddTreatment.TabIndex = 38;
+            this.btnAddTreatment.Text = "Add";
+            this.btnAddTreatment.UseVisualStyleBackColor = true;
+            this.btnAddTreatment.Click += new System.EventHandler(this.AddTreatment);
+            // 
             // txtBxNote
             // 
-            this.txtBxNote.Location = new System.Drawing.Point(472, 42);
+            this.txtBxNote.Location = new System.Drawing.Point(529, 45);
             this.txtBxNote.Multiline = true;
             this.txtBxNote.Name = "txtBxNote";
             this.txtBxNote.Size = new System.Drawing.Size(335, 135);
@@ -403,7 +459,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label17.Location = new System.Drawing.Point(471, 18);
+            this.label17.Location = new System.Drawing.Point(528, 21);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(44, 20);
             this.label17.TabIndex = 36;
@@ -411,7 +467,7 @@
             // 
             // txtBxTreatment
             // 
-            this.txtBxTreatment.Location = new System.Drawing.Point(32, 42);
+            this.txtBxTreatment.Location = new System.Drawing.Point(175, 45);
             this.txtBxTreatment.Multiline = true;
             this.txtBxTreatment.Name = "txtBxTreatment";
             this.txtBxTreatment.Size = new System.Drawing.Size(335, 135);
@@ -421,66 +477,47 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label16.Location = new System.Drawing.Point(31, 18);
+            this.label16.Location = new System.Drawing.Point(174, 21);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(172, 20);
             this.label16.TabIndex = 34;
             this.label16.Text = "Treatment description";
             // 
-            // btnAddTreatment
+            // btnAddLaboratory
             // 
-            this.btnAddTreatment.Location = new System.Drawing.Point(30, 183);
-            this.btnAddTreatment.Name = "btnAddTreatment";
-            this.btnAddTreatment.Size = new System.Drawing.Size(75, 23);
-            this.btnAddTreatment.TabIndex = 38;
-            this.btnAddTreatment.Text = "Add";
-            this.btnAddTreatment.UseVisualStyleBackColor = true;
-            this.btnAddTreatment.Click += new System.EventHandler(this.AddTreatment);
+            this.btnAddLaboratory.Location = new System.Drawing.Point(870, 91);
+            this.btnAddLaboratory.Name = "btnAddLaboratory";
+            this.btnAddLaboratory.Size = new System.Drawing.Size(174, 40);
+            this.btnAddLaboratory.TabIndex = 40;
+            this.btnAddLaboratory.Text = "Add Laboratory";
+            this.btnAddLaboratory.UseVisualStyleBackColor = true;
+            this.btnAddLaboratory.Click += new System.EventHandler(this.AddLaboratory);
             // 
-            // btnAddNote
+            // label18
             // 
-            this.btnAddNote.Location = new System.Drawing.Point(475, 183);
-            this.btnAddNote.Name = "btnAddNote";
-            this.btnAddNote.Size = new System.Drawing.Size(75, 23);
-            this.btnAddNote.TabIndex = 39;
-            this.btnAddNote.Text = "Add";
-            this.btnAddNote.UseVisualStyleBackColor = true;
-            this.btnAddNote.Click += new System.EventHandler(this.AddNote);
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label18.Location = new System.Drawing.Point(839, 18);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(89, 20);
+            this.label18.TabIndex = 39;
+            this.label18.Text = "Laboratory";
             // 
-            // lblDateDischarged
+            // dgvLaboratory
             // 
-            this.lblDateDischarged.AutoSize = true;
-            this.lblDateDischarged.Location = new System.Drawing.Point(155, 230);
-            this.lblDateDischarged.Name = "lblDateDischarged";
-            this.lblDateDischarged.Size = new System.Drawing.Size(71, 16);
-            this.lblDateDischarged.TabIndex = 34;
-            this.lblDateDischarged.Text = "10/02/2021";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label13.Location = new System.Drawing.Point(597, 18);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 20);
-            this.label13.TabIndex = 36;
-            this.label13.Text = "Note";
-            // 
-            // txtBoxNote
-            // 
-            this.txtBoxNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtBoxNote.Location = new System.Drawing.Point(601, 52);
-            this.txtBoxNote.Multiline = true;
-            this.txtBoxNote.Name = "txtBoxNote";
-            this.txtBoxNote.ReadOnly = true;
-            this.txtBoxNote.Size = new System.Drawing.Size(222, 162);
-            this.txtBoxNote.TabIndex = 37;
+            this.dgvLaboratory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLaboratory.Location = new System.Drawing.Point(839, 52);
+            this.dgvLaboratory.Name = "dgvLaboratory";
+            this.dgvLaboratory.RowHeadersWidth = 51;
+            this.dgvLaboratory.RowTemplate.Height = 24;
+            this.dgvLaboratory.Size = new System.Drawing.Size(205, 162);
+            this.dgvLaboratory.TabIndex = 38;
             // 
             // PatientInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 565);
+            this.ClientSize = new System.Drawing.Size(1083, 565);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.groupBox1);
@@ -492,6 +529,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTreatments)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLaboratory)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -538,5 +576,8 @@
         private System.Windows.Forms.Label lblDateDischarged;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtBoxNote;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DataGridView dgvLaboratory;
+        private System.Windows.Forms.Button btnAddLaboratory;
     }
 }

@@ -158,8 +158,6 @@ namespace LRCHPrototype
                 PatientInformation patientInformation = new PatientInformation();
                 patientInformation.Tag = phyPatTag;
                 patientInformation.Show();
-
-                this.Hide();
             }
         }
     }

@@ -43,6 +43,9 @@ namespace LRCHPrototype
 
             // Show the notes about the patient.
             ShowNotes();
+
+            // Show the laboratory dates for the patient.
+            ShowLaboratories();
         }
 
         /*
@@ -183,6 +186,58 @@ namespace LRCHPrototype
         }
 
         /**
+         * Show the laboratory records for the patient.
+         */
+        private void ShowLaboratories()
+        {
+            string storedProcedureName = "dbo.sp_Get_Patient_Labs";
+            using (SqlCommand command = new SqlCommand(storedProcedureName, this.connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@PatientNo", this.physicianPatientTagData.PatientNo);
+
+                this.connection.Open();
+
+                // Create a new SqlDataReader to read the rows from the query result
+                SqlDataReader reader = command.ExecuteReader();
+
+                dgvLaboratory.Columns.Clear(); // Remove all columns.
+
+                dgvLaboratory.Rows.Clear(); // Remove all elements.
+
+                dgvLaboratory.AutoGenerateColumns = false;
+
+                // Set the only one column header
+                dgvLaboratory.Columns.Add("Laboratories", "LABORATORIES");
+
+                // Loop over the rows and add each row to the DataGridView
+                while (reader.Read())
+                {
+                    string sampleDate = reader.GetDateTime(0).ToString("MM/dd/yyyy"); // Get the laboratory date
+
+                    // Create a new row and set the values of its cells
+                    DataGridViewRow row = new DataGridViewRow();
+
+                    // Create a column cell for the sample date
+                    DataGridViewTextBoxCell sampleDateCell = new DataGridViewTextBoxCell();
+                    // Set the value of the sample date cell
+                    sampleDateCell.Value = sampleDate;
+                    // Add the cell
+                    row.Cells.Add(sampleDateCell);
+
+                    // Add the row to the DataGridView
+                    dgvLaboratory.Rows.Add(row);
+                }
+
+
+                // Close the SqlDataReader and database connection
+                reader.Close();
+
+                this.connection.Close();
+            }
+        }
+
+        /**
          * Go back to the Physician patient report window.
          * 
          * <param name="e"></param>
@@ -191,13 +246,6 @@ namespace LRCHPrototype
         private void GoBack(object sender, EventArgs e)
         {
             this.Hide();
-
-            //PhysicianPatientDisplay ppd = new PhysicianPatientDisplay();
-            //ppd.Tag = this.physicianPatientTagData;
-            //ppd.Show();
-
-            PhysicianPatientDashboard physicianPatientDashboard = new PhysicianPatientDashboard();
-            physicianPatientDashboard.Show();
         }
 
         /**
@@ -277,6 +325,45 @@ namespace LRCHPrototype
                 }
                 else
                 {
+                    // Close the database connection
+                    this.connection.Close();
+                }
+            }
+        }
+
+        /**
+         * Create a new laboratory record for the patient.
+         * <param name="e"></param>
+         * <param name="sender"></param>
+         */
+        private void AddLaboratory(object sender, EventArgs e)
+        {
+            string storedProcedureName = "dbo.sp_Insert_Patient_Lab";
+            using (SqlCommand command = new SqlCommand(storedProcedureName, this.connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@PatientNo", this.physicianPatientTagData.PatientNo);
+
+                // Open the connection
+                this.connection.Open();
+
+                int rowsAffected = command.ExecuteNonQuery();
+
+                // check if the insert was successful
+                if (rowsAffected > 0)
+                {
+                    this.connection.Close(); // Close the database connection
+
+                    MessageBox.Show("Laboratory record added succesfully.");
+
+                    txtBxTreatment.Text = String.Empty;
+
+                    ShowLaboratories(); // Update the laboratory data grid view
+                }
+                else
+                {
+                    MessageBox.Show("Lab record was not added due to an error");
+
                     // Close the database connection
                     this.connection.Close();
                 }
