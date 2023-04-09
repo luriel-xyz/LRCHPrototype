@@ -76,6 +76,7 @@
             this.dgvPhysicianPatient.RowTemplate.Height = 24;
             this.dgvPhysicianPatient.Size = new System.Drawing.Size(902, 321);
             this.dgvPhysicianPatient.TabIndex = 0;
+            this.dgvPhysicianPatient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhysicianPatient_CellContentClick);
             // 
             // lbl1
             // 

@@ -12,10 +12,15 @@ using System.Windows.Forms;
 
 namespace LRCHPrototype
 {
+    /**
+     * This form shows the information about the physician along with its patients.
+     */
     public partial class PhysicianPatientDisplay : Form
     {
         private string connectionString;
         private SqlConnection connection;
+
+        private PhysicianTagData data;
 
         public PhysicianPatientDisplay()
         {
@@ -49,7 +54,8 @@ namespace LRCHPrototype
         private void PhysicianPatientDisplay_Load(object sender, EventArgs e)
         {
             // Get the physician number that was passed to this form.
-            PhysicianTagData physician = (PhysicianTagData)this.Tag;
+            this.data = (PhysicianTagData)this.Tag;
+            PhysicianTagData physician = this.data;
 
             // Set physician no, name, and date.
             SetReportHeader();
@@ -71,6 +77,7 @@ namespace LRCHPrototype
                 dgvPhysicianPatient.Columns.Add("Patient name", "PATIENT-NAME");
                 dgvPhysicianPatient.Columns.Add("Location", "LOCATION");
                 dgvPhysicianPatient.Columns.Add("Date admitted", "DATE-ADMITTED");
+                dgvPhysicianPatient.Columns.Add("View patient info", "Action");
 
                 // Loop over the rows and add each row to the DataGridView
                 while (reader.Read())
@@ -108,12 +115,13 @@ namespace LRCHPrototype
                     dateAdmittedCell.Value = admittedDate.ToString();
                     DataGridViewButtonCell btnViewPatientInfoCell = new DataGridViewButtonCell();
                     // Set the value of the button cell
-                    btnViewPatientInfoCell.Tag = patientNo;
+                    btnViewPatientInfoCell.Tag = new PhysicianPatientTagData(physician.PhysicianNo, patientNo);
                     btnViewPatientInfoCell.Value = "View patient info";
 
                     row.Cells.Add(patientNoCell);
                     row.Cells.Add(patientNameCell);
                     row.Cells.Add(locationCell);
+                    row.Cells.Add(dateAdmittedCell);
                     row.Cells.Add(btnViewPatientInfoCell);
 
                     // Add the row to the DataGridView
@@ -129,10 +137,30 @@ namespace LRCHPrototype
 
         private void SetReportHeader()
         {
-            PhysicianTagData data = (PhysicianTagData)this.Tag;
+            lblPhysicianNo.Text = this.data.PhysicianNo.ToString(); // Set the physician number
+            lblPhysicianName.Text = this.data.PhysicianName.ToString(); // Set the physician name
 
-            lblPhysicianNo.Text = data.PhysicianNo.ToString();
-            lblPhysicianName.Text = data.PhysicianName.ToString();
+            DateTime currentDate = DateTime.Today; // Get the current date
+            lblDate.Text = currentDate.ToString("MM/dd/yyyy"); // Set the current date
+        }
+
+        /**
+          * Open the patient information window.
+          */
+        private void dgvPhysicianPatient_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == dgvPhysicianPatient.Columns["View patient info"].Index)
+            {
+                // Get the tag value of the button
+                PhysicianPatientTagData phyPatTag = 
+                    (PhysicianPatientTagData)dgvPhysicianPatient.Rows[e.RowIndex].Cells["View patient info"].Tag;
+
+                PatientInformation patientInformation = new PatientInformation();
+                patientInformation.Tag = phyPatTag;
+                patientInformation.Show();
+
+                this.Hide();
+            }
         }
     }
 }

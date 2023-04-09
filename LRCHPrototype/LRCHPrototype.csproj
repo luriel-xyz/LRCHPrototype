@@ -69,6 +69,12 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="PatientInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientInformation.Designer.cs">
+      <DependentUpon>PatientInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="PhysicianPatientDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,7 @@
     <Compile Include="PhysicianPatientDisplay.Designer.cs">
       <DependentUpon>PhysicianPatientDisplay.cs</DependentUpon>
     </Compile>
+    <Compile Include="PhysicianPatientTagData.cs" />
     <Compile Include="PhysicianTagData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,8 +98,12 @@
     <Compile Include="RoomUtilizationDashboard.Designer.cs">
       <DependentUpon>RoomUtilizationDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="TagHelper.cs" />
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientInformation.resx">
+      <DependentUpon>PatientInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PhysicianPatientDashboard.resx">
       <DependentUpon>PhysicianPatientDashboard.cs</DependentUpon>
