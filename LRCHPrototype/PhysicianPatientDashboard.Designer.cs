@@ -40,7 +40,7 @@
             this.dgvPhysicians.Name = "dgvPhysicians";
             this.dgvPhysicians.RowHeadersWidth = 51;
             this.dgvPhysicians.RowTemplate.Height = 24;
-            this.dgvPhysicians.Size = new System.Drawing.Size(873, 441);
+            this.dgvPhysicians.Size = new System.Drawing.Size(483, 441);
             this.dgvPhysicians.TabIndex = 3;
             this.dgvPhysicians.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhysicians_CellContentClick);
             // 
@@ -58,7 +58,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 525);
+            this.ClientSize = new System.Drawing.Size(542, 525);
             this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.dgvPhysicians);
             this.Name = "PhysicianPatientDashboard";

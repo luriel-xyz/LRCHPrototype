@@ -34,12 +34,20 @@ namespace LRCHPrototype
         }
 
         /**
-         * Go back to the Physician list window.
+         * Handle Go back button click.
          * 
          * <param name="e"></param>
          * <param name="sender"></param>
          */
         private void GoBack(object sender, EventArgs e)
+        {
+            GoBack();
+        }
+
+        /**
+         * Go back to the Physician list window.
+         */
+        private void GoBack()
         {
             this.Hide();
 
@@ -78,6 +86,12 @@ namespace LRCHPrototype
                 dgvPhysicianPatient.Columns.Add("Location", "LOCATION");
                 dgvPhysicianPatient.Columns.Add("Date admitted", "DATE-ADMITTED");
                 dgvPhysicianPatient.Columns.Add("View patient info", "Action");
+
+                // Check if this physician has no patient.
+                if (!reader.Read())
+                {
+                    MessageBox.Show(physician.PhysicianName + " has no patients.");
+                }
 
                 // Loop over the rows and add each row to the DataGridView
                 while (reader.Read())

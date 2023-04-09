@@ -30,13 +30,13 @@
         {
             this.btnGoBack = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvPhysicianPatient = new System.Windows.Forms.DataGridView();
-            this.lbl1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.lblPhysicianNo = new System.Windows.Forms.Label();
             this.lblPhysicianName = new System.Windows.Forms.Label();
+            this.lblPhysicianNo = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl1 = new System.Windows.Forms.Label();
+            this.dgvPhysicianPatient = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhysicianPatient)).BeginInit();
             this.SuspendLayout();
@@ -62,66 +62,10 @@
             this.groupBox1.Controls.Add(this.dgvPhysicianPatient);
             this.groupBox1.Location = new System.Drawing.Point(29, 42);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(915, 408);
+            this.groupBox1.Size = new System.Drawing.Size(772, 408);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Physician Patient";
-            // 
-            // dgvPhysicianPatient
-            // 
-            this.dgvPhysicianPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPhysicianPatient.Location = new System.Drawing.Point(6, 81);
-            this.dgvPhysicianPatient.Name = "dgvPhysicianPatient";
-            this.dgvPhysicianPatient.RowHeadersWidth = 51;
-            this.dgvPhysicianPatient.RowTemplate.Height = 24;
-            this.dgvPhysicianPatient.Size = new System.Drawing.Size(902, 321);
-            this.dgvPhysicianPatient.TabIndex = 0;
-            this.dgvPhysicianPatient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhysicianPatient_CellContentClick);
-            // 
-            // lbl1
-            // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(7, 36);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(108, 16);
-            this.lbl1.TabIndex = 1;
-            this.lbl1.Text = "PHYSICIAN-NO: ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "PHYSICIAN-NAME: ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(784, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 16);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "DATE: ";
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(833, 36);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(71, 16);
-            this.lblDate.TabIndex = 4;
-            this.lblDate.Text = "10/04/2014";
-            // 
-            // lblPhysicianNo
-            // 
-            this.lblPhysicianNo.AutoSize = true;
-            this.lblPhysicianNo.Location = new System.Drawing.Point(116, 36);
-            this.lblPhysicianNo.Name = "lblPhysicianNo";
-            this.lblPhysicianNo.Size = new System.Drawing.Size(71, 16);
-            this.lblPhysicianNo.TabIndex = 5;
-            this.lblPhysicianNo.Text = "10/04/2014";
             // 
             // lblPhysicianName
             // 
@@ -132,11 +76,67 @@
             this.lblPhysicianName.TabIndex = 6;
             this.lblPhysicianName.Text = "10/04/2014";
             // 
+            // lblPhysicianNo
+            // 
+            this.lblPhysicianNo.AutoSize = true;
+            this.lblPhysicianNo.Location = new System.Drawing.Point(116, 36);
+            this.lblPhysicianNo.Name = "lblPhysicianNo";
+            this.lblPhysicianNo.Size = new System.Drawing.Size(71, 16);
+            this.lblPhysicianNo.TabIndex = 5;
+            this.lblPhysicianNo.Text = "10/04/2014";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(691, 36);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(71, 16);
+            this.lblDate.TabIndex = 4;
+            this.lblDate.Text = "10/04/2014";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(642, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 16);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "DATE: ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "PHYSICIAN-NAME: ";
+            // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.Location = new System.Drawing.Point(7, 36);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(108, 16);
+            this.lbl1.TabIndex = 1;
+            this.lbl1.Text = "PHYSICIAN-NO: ";
+            // 
+            // dgvPhysicianPatient
+            // 
+            this.dgvPhysicianPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhysicianPatient.Location = new System.Drawing.Point(6, 81);
+            this.dgvPhysicianPatient.Name = "dgvPhysicianPatient";
+            this.dgvPhysicianPatient.RowHeadersWidth = 51;
+            this.dgvPhysicianPatient.RowTemplate.Height = 24;
+            this.dgvPhysicianPatient.Size = new System.Drawing.Size(756, 321);
+            this.dgvPhysicianPatient.TabIndex = 0;
+            this.dgvPhysicianPatient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhysicianPatient_CellContentClick);
+            // 
             // PhysicianPatientDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(973, 475);
+            this.ClientSize = new System.Drawing.Size(826, 475);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnGoBack);
             this.Name = "PhysicianPatientDisplay";

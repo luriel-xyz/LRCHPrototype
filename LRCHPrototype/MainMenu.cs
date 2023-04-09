@@ -26,7 +26,7 @@ namespace LRCHPrototype
          * <param name="sender"></param>
          * <param name="e"></param>
          */
-        private void ShowRoomUtilizationAsync(object sender, EventArgs e)
+        private void ShowRoomUtilization(object sender, EventArgs e)
         {
             MainMenu mainMenu = this;
 
@@ -51,6 +51,16 @@ namespace LRCHPrototype
             mainMenu.Hide();
 
             physicianPatientDashboard.ShowDialog();
+        }
+
+        /**
+         * Close the application.
+         * <param name="sender"></param>
+         * <param name="e"></param>
+         */
+        private void Exit(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
