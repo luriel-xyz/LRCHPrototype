@@ -32,7 +32,6 @@
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.textUser = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.buttonCancel = new System.Windows.Forms.Button();
             this.textPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -73,16 +72,6 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Password";
             // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Location = new System.Drawing.Point(238, 318);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(111, 37);
-            this.buttonCancel.TabIndex = 4;
-            this.buttonCancel.Text = "Cancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click_1);
-            // 
             // textPassword
             // 
             this.textPassword.Location = new System.Drawing.Point(92, 232);
@@ -107,7 +96,6 @@
             this.ClientSize = new System.Drawing.Size(398, 397);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textPassword);
-            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textUser);
             this.Controls.Add(this.buttonSubmit);
@@ -126,7 +114,6 @@
         private System.Windows.Forms.Button buttonSubmit;
         private System.Windows.Forms.TextBox textUser;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.TextBox textPassword;
         private System.Windows.Forms.Label label1;
     }
