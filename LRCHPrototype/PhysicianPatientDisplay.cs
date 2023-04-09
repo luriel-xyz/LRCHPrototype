@@ -72,6 +72,8 @@ namespace LRCHPrototype
             string storedProcedureName = "dbo.sp_Get_Patients_By_Physician_No";
             using (SqlCommand command = new SqlCommand(storedProcedureName, this.connection))
             {
+                bool rowExists = false;
+
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@PhysicianNo", physician.PhysicianNo);
 
@@ -87,15 +89,12 @@ namespace LRCHPrototype
                 dgvPhysicianPatient.Columns.Add("Date admitted", "DATE-ADMITTED");
                 dgvPhysicianPatient.Columns.Add("View patient info", "Action");
 
-                // Check if this physician has no patient.
-                if (!reader.Read())
-                {
-                    MessageBox.Show(physician.PhysicianName + " has no patients.");
-                }
-
                 // Loop over the rows and add each row to the DataGridView
                 while (reader.Read())
                 {
+                    // If there is a row
+                    rowExists = true;
+
                     // Retrieve row data
                     int patientNo = reader.GetInt32(0);
                     string patientName = reader.GetString(1);
@@ -144,6 +143,12 @@ namespace LRCHPrototype
 
                 // Close the SqlDataReader and database connection
                 reader.Close();
+
+                // If there is no data
+                if (!rowExists)
+                {
+                    MessageBox.Show(physician.PhysicianName + " has no patients.");
+                }
 
                 this.connection.Close();
             }
