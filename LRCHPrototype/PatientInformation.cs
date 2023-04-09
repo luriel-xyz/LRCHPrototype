@@ -46,6 +46,9 @@ namespace LRCHPrototype
 
             // Show the laboratory dates for the patient.
             ShowLaboratories();
+
+            // Show total appointments
+            ShowAppointmentTotal();
         }
 
         /*
@@ -367,6 +370,29 @@ namespace LRCHPrototype
                     // Close the database connection
                     this.connection.Close();
                 }
+            }
+        }
+
+        private void ShowAppointmentTotal()
+        {
+            string storedProcedureName = "dbo.sp_Count_Appointments_By_Physician_Patient";
+            using (SqlCommand command = new SqlCommand(storedProcedureName, this.connection))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@PatientNo", this.physicianPatientTagData.PatientNo);
+                command.Parameters.AddWithValue("@PhysicianNo", this.physicianPatientTagData.PhysicianNo);
+
+                // Open the connection
+                this.connection.Open();
+
+                // execute the T-SQL query and get the result as a scalar value
+                int totalAppointments = (int)command.ExecuteScalar();
+
+                // Set the value of the total appointments label
+                lblTotalAppointments.Text = totalAppointments.ToString();
+
+                // Close the database connection
+                this.connection.Close();
             }
         }
     }
