@@ -79,6 +79,8 @@ namespace LRCHPrototype
                 int stayId = Int32.Parse(txtStayId.Text);
 
                 UnassignBed(connection, stayId);
+
+                RoomUtilizationDashboard_Load(sender, e);
             }
             catch (FormatException)
             {

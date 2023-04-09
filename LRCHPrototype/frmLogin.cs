@@ -28,25 +28,34 @@ namespace LRCHPrototype
 
         }
 
+
         private void textUser_TextChanged(object sender, EventArgs e)
         {
 
         }
+
 
         private void textPassword_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+
         private void buttonSubmit_Click_1(object sender, EventArgs e)
         {
-            this.Visible = false;
-            MainMenu mainScreen = new MainMenu();
-            mainScreen.ShowDialog();
-
-
-
+            if (textUser.Text == "admin1" && textPassword.Text == "12345678")
+            {
+                this.Visible = false;
+                MainMenu mainScreen = new MainMenu();
+                mainScreen.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("ERROR: 'Username or password wrong.");
+            }
+           
         }
+
 
         private void buttonCancel_Click_1(object sender, EventArgs e)
         {
