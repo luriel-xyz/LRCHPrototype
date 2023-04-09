@@ -16,6 +16,9 @@ namespace LRCHPrototype
         public MainMenu()
         {
             InitializeComponent();
+
+            // Set the start position to center screen (Position this window in the center of the screen.)
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         /**
