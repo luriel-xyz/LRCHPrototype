@@ -1,4 +1,4 @@
-# Lakeridge Community Hospital Dashboard Prototype 
+# LRCH Dashboard Prototype 
 ---
 This repository contains .NET code that was used to create a dashboard prototype, which is a requirement for the final project of the DBAS 5206 course.
 
